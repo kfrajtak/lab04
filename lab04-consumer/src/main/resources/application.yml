@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: spring-cloud-eureka-feign-client
+  resources:
+    add-mappings: true
+server:
+  port: 8080
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+    metadataMap:
+      instanceId: ${vcap.application.instance_id:${spring.application.name}:${spring.application.instance_id:${server.port}}}
+      zone: ${eureka.client.serviceUrl.defaultZone}
+
+endpoints:
+  health:
+    sensitive: false
+
+logging.level.org.springframework.web: DEBUG
+logging.level.web: TRACE
+
+feign:
+  hystrix:
+    enabled: true
