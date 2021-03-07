@@ -1,7 +1,8 @@
 spring:
   application:
     name: spring-cloud-eureka-client
-#server:  port: 0
+#server:
+#  port: 0
 eureka:
   healthcheck:
     enabled: true
@@ -11,5 +12,4 @@ eureka:
   instance:
     preferIpAddress: true
     instanceId: ${vcap.application.instance_id:${spring.application.name}:${spring.application.instance_id:${server.port}}}
-#instanceId: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
 

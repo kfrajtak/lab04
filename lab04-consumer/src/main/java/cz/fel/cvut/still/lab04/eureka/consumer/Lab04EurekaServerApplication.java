@@ -12,9 +12,9 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @EnableDiscoveryClient
 @EnableCircuitBreaker
 @Slf4j
-public class Application {
+public class Lab04EurekaServerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
+		SpringApplication.run(Lab04EurekaServerApplication.class, args);
 	}
 }

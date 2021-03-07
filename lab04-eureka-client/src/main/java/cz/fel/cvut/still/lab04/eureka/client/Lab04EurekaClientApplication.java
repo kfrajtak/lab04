@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class Lab04EurekaClientApplication {
 
 	public static void main(String[] args) {
+		SpringBootUtil.setPort(args,8800, 8900);
 		SpringApplication.run(Lab04EurekaClientApplication.class, args);
 	}
-
 }
