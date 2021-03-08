@@ -12,4 +12,11 @@ eureka:
   instance:
     preferIpAddress: true
     instanceId: ${vcap.application.instance_id:${spring.application.name}:${spring.application.instance_id:${server.port}}}
-
+management:
+  endpoint:
+    shutdown:
+      enabled: true
+    heapdump:
+      enabled: true
+    logfile:
+      enabled: true
