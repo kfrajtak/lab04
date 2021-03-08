@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: greeting-service-client
+  resources:
+    add-mappings: true
+server:
+  port: 8080
+
+endpoints:
+  health:
+    sensitive: false
+
+logging.level.org.springframework.web: DEBUG
+logging.level.web: TRACE
